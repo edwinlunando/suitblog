@@ -3,7 +3,7 @@ from django.contrib import admin
 from .models import Post
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'created')
+    list_display = ('title', 'slug', 'created', 'is_draft', 'is_published')
     search_fields = ('title',)
 
 
