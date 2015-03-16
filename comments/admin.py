@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Comment
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('comment_text', 'created', 'updated')
+
+admin.site.register(Comment, CommentAdmin)

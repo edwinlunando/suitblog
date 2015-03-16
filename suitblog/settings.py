@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'bootstrap3',
 
     'posts',
+    'comments',
 )
 
 MIDDLEWARE_CLASSES = (
