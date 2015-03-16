@@ -10,7 +10,7 @@ class Post(models.Model):
     is_published = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
 
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, null=True, blank=True)
 
     def __unicode__(self):
         return self.title
