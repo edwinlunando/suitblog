@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
-# Create your views here.
+from .models import Post
+
+def posts(request):
+    post_list = Post.objects.filter(is_published=True)
+    context = {
+        'post_list': post_list,
+    }
+    return render(request, 'posts.html', context)

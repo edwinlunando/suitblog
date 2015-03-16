@@ -40,9 +40,9 @@ INSTALLED_APPS = (
     #third-party
     'bootstrap3',
 
-    'posts',
-    'comments',
-    'contacts',
+    'suitblog.posts',
+    'suitblog.comments',
+    'suitblog.contacts',
 )
 
 MIDDLEWARE_CLASSES = (
