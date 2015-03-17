@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
+{% load bootstrap3 %}
+{% bootstrap_css %}
+
 {% block content %}
-    <form action="" method="">
+    <form action="" method="" class="form">
         {{ form.non_field_errors }}
+        {% bootstrap_form form %}
         <button type="submit">Submit</button>
     </form>
 {% endblock content %}
