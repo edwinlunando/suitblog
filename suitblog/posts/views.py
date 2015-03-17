@@ -9,7 +9,7 @@ def posts(request):
     }
     return render(request, 'posts.html', context)
 
-def detail(request):
+def detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     context = {
         'post': post,
