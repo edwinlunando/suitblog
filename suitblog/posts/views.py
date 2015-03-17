@@ -8,3 +8,10 @@ def posts(request):
         'post_list': post_list,
     }
     return render(request, 'posts.html', context)
+
+def detail(request):
+    post = get_object_or_404(Post, slug=slug)
+    context = {
+        'post': post,
+    }
+    return render(request, 'detail.html', context)
