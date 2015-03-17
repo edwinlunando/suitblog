@@ -5,8 +5,8 @@
     <h1>Articles</h1>
     <hr>
 
-    {% for posts in post_list %}
-        <li><a href="{% url 'detail' posts.slug %}">{{ posts }}</a></li>
+    {% for post in post_list %}
+        <li><a href="{% url 'detail' post.slug %}">{{ post }}</a></li>
     {% endfor %}
 
 {% endblock content %}
